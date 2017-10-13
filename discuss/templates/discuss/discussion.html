@@ -1,0 +1,8 @@
+<ul>
+  {% for comment in discussion.comment_set.all %}
+  <li>
+    {{ comment.text }} by {{ comment.author }} at {{ comment.created_at }}
+    {{ comment.commentreadstatus_set.all }}
+  </li>
+  {% endfor %}
+</ul>
